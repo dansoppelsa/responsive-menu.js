@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive-Menu.js</title>
+    <meta name="author" content="Dan Soppelsa"/>
+
+    <link rel="stylesheet" href="css/responsive-menu.css" />
+</head>
+<body>
+
+<h1>Responsive Menu.js</h1>
+
+<div id="menu-container">
+    <ul class="menu">
+        <li><a href="#">First Item</a></li>
+        <li><a href="#">Second Item</a></li>
+        <li>
+            <a href="#">Third Item</a>
+            <ul>
+                <li><a href="#">First Nested Item</a></li>
+                <li><a href="#">Second Nested Item</a></li>
+                <li><a href="#">Third Nested Item</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Another Item</a></li>
+        <li>
+            <a href="#">More Nesting Here</a>
+            <ul>
+                <li><a href="#">First Nested Item</a></li>
+                <li><a href="#">Second Nested Item</a></li>
+                <li><a href="#">Third Nested Item</a></li>
+            </ul>
+        </li>
+    </ul>
+    <a href="#" class="trigger">Menu</a>
+</div>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/responsive-menu.js"></script>
+
+<script>
+    $(document).ready(function()
+    {
+        $('#menu-container').responsiveMenu();
+    });
+</script>
+
+</body>
+</html>

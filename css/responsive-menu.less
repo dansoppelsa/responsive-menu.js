@@ -1,0 +1,127 @@
+@import "mixins";
+
+body {
+    background: #333;
+    color: #FFF;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4em;
+    margin: 40px;
+}
+
+#menu-container {
+
+    .clearfix();
+
+
+    border: 1px solid #FFF;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul.menu {
+        .clearfix();
+
+        a {
+            color: #FFF;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border: 1px solid #AAA;
+        }
+
+        > li {
+            > a {
+                background: #111;
+
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+
+            ul {
+                li {
+                    a {
+                        background: #222;
+                        padding-left: 40px;
+
+                        &:hover {
+                            opacity: 0.9;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .trigger {
+        display: block;
+        color: #FFF;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 10px 10px 10px 50px;
+        font-size: 1.5em;
+        background: url('../img/trigger.png') left center no-repeat;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+
+    #menu-container {
+        border: none;
+        margin: 0 auto;
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul.menu {
+
+            a {
+                color: #FFF;
+                text-decoration: none;
+                display: block;
+                padding: 10px;
+                border: 1px solid #AAA;
+            }
+
+            > li {
+                float: left;
+
+                &:hover {
+                    ul {
+                        display: block;
+                    }
+                }
+
+                ul {
+                    position: absolute;
+                    display: none;
+
+                    li {
+                        a {
+                            padding-left: 25px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .trigger {
+            display: none;
+        }
+    }
+
+}

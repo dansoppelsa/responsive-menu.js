@@ -1,0 +1,107 @@
+body {
+  background: #333;
+  color: #FFF;
+}
+h1 {
+  text-align: center;
+  font-size: 4em;
+  margin: 40px;
+}
+#menu-container {
+  display: inline-block;
+  height: 1%;
+  display: block;
+  border: 1px solid #FFF;
+}
+#menu-container:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+#menu-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#menu-container ul.menu {
+  display: inline-block;
+  height: 1%;
+  display: block;
+}
+#menu-container ul.menu:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+#menu-container ul.menu a {
+  color: #FFF;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border: 1px solid #AAA;
+}
+#menu-container ul.menu > li > a {
+  background: #111;
+}
+#menu-container ul.menu > li > a:hover {
+  opacity: 0.9;
+}
+#menu-container ul.menu > li ul li a {
+  background: #222;
+  padding-left: 40px;
+}
+#menu-container ul.menu > li ul li a:hover {
+  opacity: 0.9;
+}
+#menu-container .trigger {
+  display: block;
+  color: #FFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 10px 10px 50px;
+  font-size: 1.5em;
+  background: url('../img/trigger.png') left center no-repeat;
+}
+#menu-container .trigger:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  #menu-container {
+    border: none;
+    margin: 0 auto;
+  }
+  #menu-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  #menu-container ul.menu a {
+    color: #FFF;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border: 1px solid #AAA;
+  }
+  #menu-container ul.menu > li {
+    float: left;
+  }
+  #menu-container ul.menu > li:hover ul {
+    display: block;
+  }
+  #menu-container ul.menu > li ul {
+    position: absolute;
+    display: none;
+  }
+  #menu-container ul.menu > li ul li a {
+    padding-left: 25px;
+  }
+  #menu-container .trigger {
+    display: none;
+  }
+}
